@@ -39,7 +39,7 @@
   }
   body {
     /* Fixed font class to use proper Tailwind font-sans instead of custom font-inter */
-    @apply bg-white text- [#2D2D2D] font-sans;
+    @apply bg-white text-[#2D2D2D] font-sans;
   }
 
   /* Added smooth scroll animations */
@@ -274,6 +274,6 @@
 }
 
 /* Hide v0 attribution */
-a[href*="v0.dev"] {
+a[href*="vingel"] {
   display: none !important;
 }
