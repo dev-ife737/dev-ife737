@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   :root {
     /* Updated color scheme to premium orange/white/dark grey */
@@ -39,7 +40,7 @@
   }
   body {
     /* Fixed font class to use proper Tailwind font-sans instead of custom font-inter */
-    @apply bg-white text-[#2D2D2D] font-sans;
+    @apply bg-white text- [#2D2D2D] font-sans;
   }
 
   /* Added smooth scroll animations */
