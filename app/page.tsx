@@ -30,7 +30,7 @@ export default function HomePage() {
     sections.forEach((section) => observer.observe(section))
 
     return () => observer.disconnect()
-  }, [])
+  }, []
 
   return (
     <div className="min-h-screen bg-white">
