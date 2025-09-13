@@ -8,9 +8,9 @@ export default function AffiliateSection() {
       <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center">
         <h2 className="text-3xl font-bold mb-12 text-gray-900">Exclusive travel deals</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        <Link href="/affliate-booking-section">
+        <Link href="/affiliate-booking-section">
           <button className="btn-primary mt-6">Exclusive travel deals</button>
-          </link>
+          </Link>
           
           {/* expedia */}
           <Link
