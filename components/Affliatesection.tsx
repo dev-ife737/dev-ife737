@@ -29,11 +29,12 @@ export default function AffiliateSection() {
 
 
           {/* Viator */}
-           <a>
-          <Link
+           <a
+          
             href="https://www.viator.com/?m=33953&supag=1240250194145278&supca=676923706&supsc=kwd-77515991602646&supai=77515770892157&supdv=c&supnt=o&suplp=152628&supli=3169&supti=kwd-77515991602646&tsem=true&supci=kwd-77515991602646&gclid=04b31dd4b24716c0a76175bdfac3df92&gclsrc=3p.ds&msclkid=04b31dd4b24716c0a76175bdfac3df92&pid=P00102658&mcid=42383&medium=link&campaign=vingel-website"
             target="_blank"
             rel="noopener noreferrer"
+            >
             className="block bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-8 flex flex-col items-center"
           >
             <div className="h-16 w-16 mb-4 flex items-center justify-center rounded-full bg-blue-500 text-white text-2xl font-bold">
