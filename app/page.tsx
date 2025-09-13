@@ -31,7 +31,7 @@ export default function HomePage() {
 
     return () => observer.disconnect()
   }, []);
-}
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -45,7 +45,6 @@ export default function HomePage() {
       <div className="fade-in-section">
         <ServicesSection />
       </div>
-        <Event
       </div>
       <div className="fade-in-section">
         <Testimonials />
