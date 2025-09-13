@@ -45,7 +45,6 @@ export default function HomePage() {
       <div className="fade-in-section">
         <ServicesSection />
       </div>
-      </div>
       <div className="fade-in-section">
         <Testimonials />
       </div>
