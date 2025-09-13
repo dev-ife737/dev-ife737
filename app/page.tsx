@@ -35,10 +35,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      <Hero />
-      <div className="fade-in-section">
-        <UgandaEventSection />
-      </div>
+      <Hero />        
       <div className="fade-in-section">
         <Affliatesection />
       </div>
@@ -48,8 +45,7 @@ export default function HomePage() {
       <div className="fade-in-section">
         <ServicesSection />
       </div>
-      <div className="fade-in-section">
-        <EventsSpotlight />
+        <Event
       </div>
       <div className="fade-in-section">
         <Testimonials />
