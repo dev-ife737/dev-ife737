@@ -1,6 +1,6 @@
 "use client"
 
-export function Affliatesection() {
+ function Affliatesection() {
   return (
       <section className="py-20 bg-gray-50 fade-in-section">
             <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center">
