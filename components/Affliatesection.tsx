@@ -1,41 +1,58 @@
-{/* Expedia */}
-<a
-  href="https://expedia.com/affiliate/VaSAcKD"
-    target="_blank"
-      rel="noopener noreferrer"
-        className="block bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-8 flex flex-col items-center"
-        >
-          <div className="h-16 w-16 mb-4 flex items-center justify-center rounded-full bg-yellow-500 text-white text-2xl font-bold">
-              E
-                </div>
-                  <h3 className="text-xl font-semibold mb-2">Expedia</h3>
-                    <p className="text-gray-600">Unlock deals on hotels, flights & more</p>
-                    </a>
+"use client"
 
-                    {/* Viator */}
-                    <a
-                      href="https://tinyurl.com/viator-vingel"
-                        target="_blank"
-                          rel="noopener noreferrer"
-                            className="block bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-8 flex flex-col items-center"
-                            >
-                              <div className="h-16 w-16 mb-4 flex items-center justify-center rounded-full bg-blue-500 text-white text-2xl font-bold">
-                                  V
-                                    </div>
-                                      <h3 className="text-xl font-semibold mb-2">Viator</h3>
-                                        <p className="text-gray-600">Tours & experiences worldwide</p>
-                                        </a>
+export function Affliatesection() {
+  return (
+      <section className="py-20 bg-gray-50 fade-in-section">
+            <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center">
+                    <h2 className="text-3xl font-bold mb-12 text-gray-900">Exclusive Travel Deals</h2>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 
-                                        {/* Travelstart */}
-                                        <a
-                                          href="https://tinyurl.com/travelstart-vingel"
-                                            target="_blank"
-                                              rel="noopener noreferrer"
-                                                className="block bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-8 flex flex-col items-center"
-                                                >
-                                                  <div className="h-16 w-16 mb-4 flex items-center justify-center rounded-full bg-green-500 text-white text-2xl font-bold">
-                                                      T
-                                                        </div>
-                                                          <h3 className="text-xl font-semibold mb-2">Travelstart</h3>
-                                                            <p className="text-gray-600">Affordable flights & hotel deals</p>
-                                                            </a>
+                                      {/* Expedia */}
+                                                <a
+                                                            href="https://expedia.com/affiliate/VaSAcKD"
+                                                                        target="_blank"
+                                                                                    rel="noopener noreferrer"
+                                                                                                className="block bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-8 flex flex-col items-center"
+                                                                                                          >
+                                                                                                                      <div className="h-16 w-16 mb-4 flex items-center justify-center rounded-full bg-yellow-500 text-white text-2xl font-bold">
+                                                                                                                                    E
+                                                                                                                                                </div>
+                                                                                                                                                            <h3 className="text-xl font-semibold mb-2">Expedia</h3>
+                                                                                                                                                                        <p className="text-gray-600">Unlock deals on hotels, flights & more</p>
+                                                                                                                                                                                  </a>
+
+                                                                                                                                                                                            {/* Viator */}
+                                                                                                                                                                                                      <a
+                                                                                                                                                                                                                  href="https://tinyurl.com/viator-vingel"
+                                                                                                                                                                                                                              target="_blank"
+                                                                                                                                                                                                                                          rel="noopener noreferrer"
+                                                                                                                                                                                                                                                      className="block bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-8 flex flex-col items-center"
+                                                                                                                                                                                                                                                                >
+                                                                                                                                                                                                                                                                            <div className="h-16 w-16 mb-4 flex items-center justify-center rounded-full bg-blue-500 text-white text-2xl font-bold">
+                                                                                                                                                                                                                                                                                          V
+                                                                                                                                                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                                                                                  <h3 className="text-xl font-semibold mb-2">Viator</h3>
+                                                                                                                                                                                                                                                                                                                              <p className="text-gray-600">Tours & experiences worldwide</p>
+                                                                                                                                                                                                                                                                                                                                        </a>
+
+                                                                                                                                                                                                                                                                                                                                                  {/* Travelstart */}
+                                                                                                                                                                                                                                                                                                                                                            <a
+                                                                                                                                                                                                                                                                                                                                                                        href="https://tinyurl.com/travelstart-vingel"
+                                                                                                                                                                                                                                                                                                                                                                                    target="_blank"
+                                                                                                                                                                                                                                                                                                                                                                                                rel="noopener noreferrer"
+                                                                                                                                                                                                                                                                                                                                                                                                            className="block bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-8 flex flex-col items-center"
+                                                                                                                                                                                                                                                                                                                                                                                                                      >
+                                                                                                                                                                                                                                                                                                                                                                                                                                  <div className="h-16 w-16 mb-4 flex items-center justify-center rounded-full bg-green-500 text-white text-2xl font-bold">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                T
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <h3 className="text-xl font-semibold mb-2">Travelstart</h3>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <p className="text-gray-600">Affordable flights & hotel deals</p>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              </a>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </section>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  )
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  export default Affliatesection
