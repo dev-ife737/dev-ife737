@@ -8,6 +8,9 @@ export default function AffiliateSection() {
       <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center">
         <h2 className="text-3xl font-bold mb-12 text-gray-900">Exclusive travel deals</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <Link href="/affliate-booking-section">
+          <button className="btn-primary mt-6">Exclusive travel deals</button>
+          </link>
           
           {/* expedia */}
           <Link
@@ -23,7 +26,8 @@ export default function AffiliateSection() {
             <p className="text-gray-600">Unlock deals on hotels, flights & more</p>
           </Link>
 
-          {/* viator */}
+
+          {/* Viator */}
           <Link
             href="https://www.viator.com/?m=33953&supag=1240250194145278&supca=676923706&supsc=kwd-77515991602646&supai=77515770892157&supdv=c&supnt=o&suplp=152628&supli=3169&supti=kwd-77515991602646&tsem=true&supci=kwd-77515991602646&gclid=04b31dd4b24716c0a76175bdfac3df92&gclsrc=3p.ds&msclkid=04b31dd4b24716c0a76175bdfac3df92&pid=P00102658&mcid=42383&medium=link&campaign=vingel-website"
             target="_blank"
@@ -36,7 +40,6 @@ export default function AffiliateSection() {
             <h3 className="text-xl font-semibold mb-2">Viator</h3>
             <p className="text-gray-600">Tours & experiences worldwide</p>
           </Link>
-
 
           {/* Travelstart */}
           <Link
