@@ -35,7 +35,7 @@ export default function Hero() {
           Premium travel experiences crafted for discerning travelers. Join over 1,000 satisfied clients who trust us
           with their journeys.
         </p>
-        </div>
+  
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <Link href="/booking">
             <Button size="lg" className="btn-primary text-lg font-semibold">
