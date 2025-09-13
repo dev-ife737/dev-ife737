@@ -35,31 +35,7 @@ export default function Hero() {
           Premium travel experiences crafted for discerning travelers. Join over 1,000 satisfied clients who trust us
           with their journeys.
         </p>
-
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 mb-12 border border-white/20 max-w-2xl mx-auto">
-          <div className="text-[#f37021] font-bold text-lg mb-2">LIMITED TIME OPPORTUNITY</div>
-          <h3 className="text-2xl font-bold mb-4">Uganda Travel Content Creator Conference</h3>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-6 text-sm">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-[#f37021] rounded-full"></div>
-              <span>Oct 22-25, Kampala</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-[#f37021] rounded-full"></div>
-              <span>$130 (includes city tour)</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-[#f37021] rounded-full"></div>
-              <span>Visa & flight support</span>
-            </div>
-          </div>
-          <Link href="/uganda2025">
-            <Button className="bg-[#f37021] hover:bg-[#d85f1a] text-white font-semibold px-8 py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl">
-              Register Now
-            </Button>
-          </Link>
-        </div>
-
+</div
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <Link href="/booking">
             <Button size="lg" className="btn-primary text-lg font-semibold">
