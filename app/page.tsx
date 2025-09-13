@@ -2,11 +2,9 @@
 
 import Navigation from "@/components/navigation"
 import Hero from "@/components/hero"
-import UgandaEventSection from "@/components/uganda-event-section"
 import Affliatesection from "@/components/Affliatesection"
 import AboutSection from "@/components/about-section"
 import ServicesSection from "@/components/services-section"
-import EventsSpotlight from "@/components/events-spotlight"
 import Testimonials from "@/components/testimonials"
 import ContactSection from "@/components/contact-section"
 import Footer from "@/components/footer"
