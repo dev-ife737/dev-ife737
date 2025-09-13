@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 
 const TRAVELSTART_URL = "https://www.travelstart.com.ng/lp/affiliate/vingeltravels"
 const VIATOR_URL =
-  "https://www.viator.com/?m=33953&supag=1240250194145278&supca=676923706&supsc=kwd-77515991602646&supai=77515770892157&supdv=c&supnt=o&suplp=152628&supli=3169&supti=kwd-77515991602646&tsem=true&supci=kwd-77515991602646&gclid=04b31dd4b24716c0a76175bdfac3df92&gclsrc=3p.ds&msclkid=04b31dd4b24716c0a76175bdfac3df92&pid=P00102658&mcid=42383&medium=link&campaign=vingel-website"
+  "https://www.viator.com/?m=33953&supag=1240250194145278&supca=676923706&supsc=kwd-77515991602646&supai=77515770892157&supdv=c&supnt=o&suplp=152628&supli=3169&supti=kwd-77515991602646&tsem=true&supci=kwd-77515991602646&gclsrc=3p.ds&pid=P00102658&mcid=42383&medium=link&campaign=vingel-website"
   const EXPEDIA_URL = "https://expedia.com/affiliate/VaSAcKD"
 
   export default function AffiliateSection() {
