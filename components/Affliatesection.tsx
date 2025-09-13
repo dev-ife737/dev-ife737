@@ -37,6 +37,7 @@ export default function AffiliateSection() {
             <p className="text-gray-600">Tours & experiences worldwide</p>
           </Link>
 
+
           {/* Travelstart */}
           <Link
             href="https://www.travelstart.com.ng/?affid=209600&utm_source=affiliate&utm_medium=209600"
