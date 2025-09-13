@@ -31,7 +31,7 @@ export default function HomePage() {
 
     return () => observer.disconnect()
   }, []);
-
+}
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
