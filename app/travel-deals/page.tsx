@@ -1,8 +1,32 @@
+"use client"
+
 import Navigation from "@/components/navigation"
+import Hero from "@/components/hero"
 import Footer from "@/components/footer"
 import { Button } from "@/components/ui/button"
+import { useEffect } from "react"
 
-export default function TravelDealsPage() {
+export default function HomePage() {
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px",
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-fade-in-up")
+        }
+      })
+    }, observerOptions)
+
+    const sections = document.querySelectorAll(".fade-in-section")
+    sections.forEach((section) => observer.observe(section))
+
+    return () => observer.disconnect()
+  }, [])
+
   const partners = [
     {
       name: "Travelstart",
@@ -31,7 +55,7 @@ export default function TravelDealsPage() {
         "Discover amazing tours and experiences with Viator. From city tours to adventure activities, make your trip unforgettable.",
       logo: "VI",
       color: "bg-green-600",
-      link: "https://www.viator.com/?m=33953&supag=1240250194145278&supca=676923706&supsc=kwd-77515991602646&supai=77515770892157&supdv=c&supnt=o&suplp=152628&supli=3169&supti=kwd-77515991602646&tsem=true&supci=kwd-77515991602646&gclid=04b31dd4b24716c0a76175bdfac3df92&gclsrc=3p.ds&msclkid=04b31dd4b24716c0a76175bdfac3df92&pid=P00102658&mcid=42383&medium=link&campaign=vingel-website",
+      link: "https://www.viator.com/?pid=P00102658&mcid=42383&medium=link&campaign=vingel-website",
       features: ["Skip-the-line tickets", "Local guides", "Instant confirmation", "Free cancellation"],
     },
   ]
@@ -39,30 +63,12 @@ export default function TravelDealsPage() {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
+      <Hero />
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#f37021] to-[#d85f1a] text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Exclusive Travel Deals</h1>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-white/90">
-            Access the best travel deals through our trusted partners. Save money on flights, hotels, and experiences
-            worldwide.
-          </p>
-          <div className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-6 py-2">
-            <span className="text-sm font-semibold">TRUSTED BY 1,000+ TRAVELERS</span>
-          </div>
-        </div>
-      </section>
-
-      {/* Partners Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#2D2D2D] mb-4">Our Travel Partners</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We've partnered with the world's leading travel platforms to bring you the best deals and experiences.
-            </p>
-          </div>
+      {/* Affiliate Section */}
+      <section className="py-20 bg-gray-50 fade-in-section">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-12 text-gray-900">Exclusive Travel Deals</h2>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {partners.map((partner, index) => (
@@ -100,69 +106,6 @@ export default function TravelDealsPage() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Our Partners Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#2D2D2D] mb-8">Why Choose Our Partners?</h2>
-
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-[#f37021] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-2xl font-bold">✓</span>
-                </div>
-                <h3 className="text-xl font-bold mb-2">Trusted & Verified</h3>
-                <p className="text-gray-600">
-                  All our partners are verified and trusted by millions of travelers worldwide.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-[#f37021] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-2xl font-bold">$</span>
-                </div>
-                <h3 className="text-xl font-bold mb-2">Best Prices</h3>
-                <p className="text-gray-600">
-                  Get access to exclusive deals and competitive prices on flights, hotels, and tours.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-[#f37021] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-2xl font-bold">24</span>
-                </div>
-                <h3 className="text-xl font-bold mb-2">24/7 Support</h3>
-                <p className="text-gray-600">
-                  Round-the-clock customer support to help you with any travel-related queries.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold mb-4">Need Help Choosing?</h3>
-              <p className="text-gray-600 mb-6">
-                Our travel experts are here to help you find the perfect deals for your next adventure.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:+2348036386134">
-                  <Button className="bg-[#f37021] hover:bg-[#d85f1a] text-white px-8 py-3 rounded-xl">
-                    Call Us Now
-                  </Button>
-                </a>
-                <a href="https://wa.me/2348036386134" target="_blank" rel="noopener noreferrer">
-                  <Button
-                    variant="outline"
-                    className="border-[#f37021] text-[#f37021] hover:bg-[#f37021] hover:text-white px-8 py-3 rounded-xl bg-transparent"
-                  >
-                    WhatsApp Us
-                  </Button>
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </section>
