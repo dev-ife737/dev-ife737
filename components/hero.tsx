@@ -32,7 +32,7 @@ export default function Hero() {
         </h1>
 
         <p className="font-sans text-xl sm:text-2xl mb-12 text-white/90 max-w-3xl mx-auto leading-relaxed">
-          Premium travel experiences crafted for discerning travelers. Join over 1,000 satisfied clients who trust us
+          Premium travel experiences crafted for discerning travelers. Join over 1K+ satisfied clients who trust us
           with their journeys.
         </p>
   
