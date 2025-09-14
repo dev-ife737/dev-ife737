@@ -69,6 +69,8 @@ export default function Affliatesection() {
                   ))}
                 </div>
 
+                <Button> Visit </Button>
+
                 {partner.link && (
                   <a href={partner.link} target="_blank" rel="noopener noreferrer" className="block">
                     <Button className="w-full bg-[#f37021] hover:bg-[#d85f1a] text-white font-semibold py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl">
