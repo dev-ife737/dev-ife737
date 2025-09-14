@@ -14,7 +14,7 @@ export default function Affliatesection() {
       link: "https://www.travelstart.com.ng/?utm_source=vingel&utm_medium=affiliate",
       features: ["Best flight prices", "Multiple airlines", "24/7 support", "Instant booking"],
     },
-    { 
+    {
       name: "Expedia",
       tagline: "Hotels, flights, and vacation packages",
       description:
@@ -48,6 +48,7 @@ export default function Affliatesection() {
               className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-gray-100 overflow-hidden"
             >
               <div className="p-8">
+                {/* Logo + Title */}
                 <div className="flex items-center mb-6">
                   <div className={`w-12 h-12 ${partner.color} rounded-xl flex items-center justify-center mr-4`}>
                     <span className="text-white font-bold text-lg">{partner.logo}</span>
@@ -58,8 +59,10 @@ export default function Affliatesection() {
                   </div>
                 </div>
 
+                {/* Description */}
                 <p className="text-gray-700 mb-6 leading-relaxed">{partner.description}</p>
 
+                {/* Features */}
                 <div className="space-y-2 mb-8">
                   {partner.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
@@ -69,8 +72,11 @@ export default function Affliatesection() {
                   ))}
                 </div>
 
+                {/* Button */}
                 <a href={partner.link} target="_blank" rel="noopener noreferrer" className="block">
-                  <Button className="w-full bg-[#f37021] hover:bg-[#d85f1a] text-white font-semibold py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl">
+                  <Button
+                    className="w-full bg-[#f37021] hover:bg-[#d85f1a] text-white font-semibold py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
+                  >
                     Visit {partner.name}
                   </Button>
                 </a>
