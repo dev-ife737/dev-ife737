@@ -1,5 +1,7 @@
 "use client"
 
+import { Button } from "@/components/ui/button"
+
 export default function Affliatesection() {
   const partners = [
     {
@@ -12,7 +14,7 @@ export default function Affliatesection() {
       link: "https://www.travelstart.com.ng/?utm_source=vingel&utm_medium=affiliate",
       features: ["Best flight prices", "Multiple airlines", "24/7 support", "Instant booking"],
     },
-    { 
+    {
       name: "Expedia",
       tagline: "Hotels, flights, and vacation packages",
       description:
@@ -67,19 +69,13 @@ export default function Affliatesection() {
                   ))}
                 </div>
 
-                {/* fixed button (tailwind only) */}
-                <a
-                  href={partner.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full"
-                >
-                  <button
-                    className="w-full bg-[#f37021] hover:bg-[#d85f1a] text-white font-semibold py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
-                  >
-                    Visit {partner.name}
-                  </button>
-                </a>
+                {partner.link && (
+                  <a href={partner.link} target="_blank" rel="noopener noreferrer" className="block">
+                    <Button className="w-full bg-[#f37021] hover:bg-[#d85f1a] text-white font-semibold py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl">
+                      Visit {partner.name}
+                    </Button>
+                  </a>
+                )}
               </div>
             </div>
           ))}
