@@ -4,43 +4,49 @@
 
 /* root variables */
 :root {
-  --primary-orange: #ff6600;
-  --primary-white: #ffffff;
-  --text-dark: #2d2d2d;
-  --orange-hover: #e55a00;
+  --brand-orange: #f37021;
+  --brand-orange-hover: #d85f1a;
+  --brand-white: #ffffff;
+  --brand-black: #2d2d2d;
 
-  --background: 0 0% 100%;
-  --foreground: 0 0% 18%;
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 18%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 18%;
-  --primary: 20 100% 50%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 0 0% 96%;
-  --secondary-foreground: 0 0% 18%;
-  --muted: 0 0% 96%;
-  --muted-foreground: 0 0% 45%;
-  --accent: 0 0% 96%;
-  --accent-foreground: 0 0% 18%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 0 0% 100%;
-  --border: 0 0% 91%;
-  --input: 0 0% 91%;
-  --ring: 20 100% 50%;
+  /* default (light theme) */
+  --background: #ffffff;
+  --foreground: #2d2d2d;
+
+  --card-bg: #ffffff;
+  --card-fg: #2d2d2d;
+
+  --muted-bg: #f6f6f6;
+  --muted-fg: #666666;
+
+  --border: #e5e5e5;
   --radius: 0.75rem;
+}
+
+.dark {
+  /* dark theme overrides */
+  --background: #1f1f1f;
+  --foreground: #ffffff;
+
+  --card-bg: #2d2d2d;
+  --card-fg: #ffffff;
+
+  --muted-bg: #333333;
+  --muted-fg: #bbbbbb;
+
+  --border: #444444;
 }
 
 /* base styles */
 * {
-  border-color: #e5e5e5; /* replaced border-border with real color */
   box-sizing: border-box;
+  border-color: var(--border);
 }
 
 body {
-  background-color: white;
-  color: #2d2d2d; /* fixed text color */
-  font-family: sans-serif; /* font-sans */
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -52,42 +58,57 @@ html {
 h1, h2, h3, h4, h5, h6 {
   font-family: sans-serif;
   font-weight: bold;
+  color: var(--foreground);
 }
-
-/* components */
 
 /* buttons */
 .btn-primary {
-  background-color: #f37021;
-  color: white;
+  background-color: var(--brand-orange);
+  color: #fff;
   font-weight: 600;
   padding: 1rem 2rem;
-  border-radius: 1rem;
-  transition: all 0.5s;
+  border-radius: var(--radius);
+  transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
-
 .btn-primary:hover {
-  background-color: #d85f1a;
+  background-color: var(--brand-orange-hover);
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .btn-secondary {
-  background-color: white;
-  color: #f37021;
+  background-color: var(--brand-white);
+  color: var(--brand-orange);
   font-weight: 600;
   padding: 1rem 2rem;
-  border: 2px solid #f37021;
-  border-radius: 1rem;
-  transition: all 0.5s;
+  border: 2px solid var(--brand-orange);
+  border-radius: var(--radius);
+  transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
-
 .btn-secondary:hover {
   background-color: #fef7f0;
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.dark .btn-secondary {
+  background-color: transparent;
+  color: var(--brand-orange);
+  border-color: var(--brand-orange);
+}
+
+/* cards */
+.card {
+  background-color: var(--card-bg);
+  color: var(--card-fg);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.3s, color 0.3s;
+}
+.card-hover:hover {
+  transform: translateY(-0.5rem) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
 /* animations */
@@ -96,7 +117,6 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(30px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
-
 .fade-in-up.animate {
   opacity: 1;
   transform: translateY(0);
@@ -107,107 +127,18 @@ h1, h2, h3, h4, h5, h6 {
   will-change: transform;
 }
 
-.card-hover {
-  transition: all 0.5s;
-}
-
-.card-hover:hover {
-  transform: translateY(-0.5rem) scale(1.05);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-}
-
 .gradient-overlay {
   background: linear-gradient(135deg, rgba(243,112,33,0.9) 0%, rgba(216,95,26,0.8) 100%);
 }
-
 .gradient-overlay-dark {
   background: linear-gradient(135deg, rgba(45,45,45,0.8) 0%, rgba(0,0,0,0.6) 100%);
 }
 
-.float {
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-}
-
-.pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes pulse-glow {
-  from { box-shadow: 0 0 20px rgba(243,112,33,0.4); }
-  to { box-shadow: 0 0 30px rgba(243,112,33,0.8); }
-}
-
-.touch-target {
-  min-height: 44px;
-  min-width: 44px;
-}
-
-.loading-spinner {
-  width: 2rem;
-  height: 2rem;
-  border: 2px solid #f37021;
-  border-top-color: transparent;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-.focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 2px #f37021;
-}
-
-/* scrollbar */
+/* utilities */
 ::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #f1f1f1; }
-::-webkit-scrollbar-thumb { background: #f37021; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #d85f1a; }
-
-/* dark mode */
-.dark body {
-  background-color: #1f1f1f;
-  color: white;
-}
-
-.dark .bg-white { background-color: #2d2d2d; }
-.dark .text-gray-700 { color: #d1d1d1; }
-.dark .text-gray-600 { color: #b0b0b0; }
-.dark .border-gray-300 { border-color: #4d4d4d; }
-
-/* intersection observer animations */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(50px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-.stagger-1 { animation-delay: 0.1s; }
-.stagger-2 { animation-delay: 0.2s; }
-.stagger-3 { animation-delay: 0.3s; }
-.stagger-4 { animation-delay: 0.4s; }
-
-/* image loading skeleton */
-.image-loading {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200% 100%;
-  animation: loading 1.5s infinite;
-}
-
-@keyframes loading {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
-}
+::-webkit-scrollbar-track { background: var(--muted-bg); }
+::-webkit-scrollbar-thumb { background: var(--brand-orange); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--brand-orange-hover); }
 
 /* reduced motion */
 @media (prefers-reduced-motion: reduce) {

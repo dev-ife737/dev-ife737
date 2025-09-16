@@ -1,116 +1,76 @@
 "use client"
 
-import Navigation from "@/components/navigation"
-import Hero from "@/components/hero"
-import Footer from "@/components/footer"
 import { Button } from "@/components/ui/button"
-import { useEffect } from "react"
 
-export default function HomePage() {
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px",
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate-fade-in-up")
-        }
-      })
-    }, observerOptions)
-
-    const sections = document.querySelectorAll(".fade-in-section")
-    sections.forEach((section) => observer.observe(section))
-
-    return () => observer.disconnect()
-  }, [])
-
+export default function AffiliatePage() {
   const partners = [
     {
-      name: "Travelstart",
-      tagline: "Book flights to anywhere in the world",
-      description:
-        "Find the best flight deals with our trusted partner Travelstart. Compare prices from multiple airlines and save on your next trip.",
-      logo: "TS",
-      color: "bg-blue-600",
-      link: "https://www.travelstart.com.ng/?utm_source=vingel&utm_medium=affiliate",
-      features: ["Best flight prices", "Multiple airlines", "24/7 support", "Instant booking"],
-    },
-    {
       name: "Expedia",
-      tagline: "Hotels, flights, and vacation packages",
-      description:
-        "Complete travel solutions with Expedia. Book hotels, flights, car rentals, and vacation packages all in one place.",
-      logo: "EX",
-      color: "bg-yellow-600",
-      link: "https://expedia.com/affiliate/VaSAcKD",
-      features: ["Hotel deals", "Package savings", "Rewards program", "Price matching"],
+      url: "https://bit.ly/46APrvI",
+      color: "bg-orange-500",
+      icon: "E",
+      description: "Unlock exclusive deals on hotels, flights, and more.",
     },
     {
       name: "Viator",
-      tagline: "Tours and experiences worldwide",
-      description:
-        "Discover amazing tours and experiences with Viator. From city tours to adventure activities, make your trip unforgettable.",
-      logo: "VI",
-      color: "bg-green-600",
-      link: "https://www.viator.com/?pid=P00102658&mcid=42383&medium=link&campaign=vingel-website",
-      features: ["Skip-the-line tickets", "Local guides", "Instant confirmation", "Free cancellation"],
+      url: "https://bit.ly/4poICor",
+      color: "bg-orange-500",
+      icon: "V",
+      description: "Book tours and experiences worldwide with trusted guides.",
+    },
+    {
+      name: "Travelstart",
+      url: "https://bit.ly/4gny4lv",
+      color: "bg-orange-500",
+      icon: "T",
+      description: "Affordable flights and hotel packages made easy.",
     },
   ]
 
   return (
-    <div className="min-h-screen bg-white">
-      <Navigation />
-      <Hero />
+    <section className="py-20 px-4 md:px-8 lg:px-20 bg-white">
+      <div className="text-center mb-14">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          Book With Our Affiliate Partners
+        </h1>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          We’ve partnered with leading travel platforms to bring you the best
+          flight, hotel, and activity deals in one place. Click a partner below
+          to start booking securely.
+        </p>
+      </div>
 
-      {/* Affiliate Section */}
-      <section className="py-20 bg-gray-50 fade-in-section">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-12 text-gray-900">Exclusive Travel Deals</h2>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {partners.map((partner, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-gray-100 overflow-hidden"
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        {partners.map((partner) => (
+          <div
+            key={partner.name}
+            className="bg-white rounded-2xl shadow-lg hover:shadow-xl border border-gray-200 transition-all duration-300 p-10 flex flex-col items-center text-center"
+          >
+            <div
+              className={`h-20 w-20 mb-6 flex items-center justify-center rounded-full text-white text-3xl font-bold ${partner.color}`}
+            >
+              {partner.icon}
+            </div>
+            <h3 className="text-xl font-semibold mb-3 text-gray-900">
+              {partner.name}
+            </h3>
+            <p className="text-gray-600 mb-6">{partner.description}</p>
+            <a
+              href={partner.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full"
+            >
+              <Button
+                size="lg"
+                className="w-full bg-orange-500 text-white hover:bg-orange-600 text-lg font-semibold rounded-xl"
               >
-                <div className="p-8">
-                  <div className="flex items-center mb-6">
-                    <div className={`w-12 h-12 ${partner.color} rounded-xl flex items-center justify-center mr-4`}>
-                      <span className="text-white font-bold text-lg">{partner.logo}</span>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-[#2D2D2D]">{partner.name}</h3>
-                      <p className="text-sm text-gray-600">{partner.tagline}</p>
-                    </div>
-                  </div>
-
-                  <p className="text-gray-700 mb-6 leading-relaxed">{partner.description}</p>
-
-                  <div className="space-y-2 mb-8">
-                    {partner.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center gap-3">
-                        <div className="w-2 h-2 bg-[#f37021] rounded-full"></div>
-                        <span className="text-sm text-gray-600">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <a href={partner.link} target="_blank" rel="noopener noreferrer" className="block">
-                    <Button className="w-full bg-[#f37021] hover:bg-[#d85f1a] text-white font-semibold py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl">
-                      Visit {partner.name}
-                    </Button>
-                  </a>
-                </div>
-              </div>
-            ))}
+                Visit {partner.name}
+              </Button>
+            </a>
           </div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
+        ))}
+      </div>
+    </section>
   )
 }
