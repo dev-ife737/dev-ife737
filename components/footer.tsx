@@ -16,7 +16,7 @@ export default function Footer() {
               <div className="w-10 h-10 bg-gradient-to-br from-[#f37021] to-[#d85f1a] rounded-full flex items-center justify-center shadow-lg">
                 <span className="text-white font-bold text-sm">VT</span>
               </div>
-              <span className="text-xl font-bold text-[#f37021]">Vingel Travels & Tours</span>
+              <span className="text-xl font-bold text-[#f37021]">Vingel Travels</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Your trusted travel partner for unforgettable experiences. Over 1,000 happy travelers served with 95% visa

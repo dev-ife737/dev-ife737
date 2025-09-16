@@ -28,7 +28,7 @@ export default function Hero() {
       <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto fade-in-up animate">
         <h1 className="font-sans text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
           Explore the World
-          <span className="block text-white drop-shadow-lg">with Vingel Travels & Tours</span>
+          <span className="block text-white drop-shadow-lg">with Vingel Travel</span>
         </h1>
 
         <p className="font-sans text-xl sm:text-2xl mb-12 text-white/90 max-w-3xl mx-auto leading-relaxed">

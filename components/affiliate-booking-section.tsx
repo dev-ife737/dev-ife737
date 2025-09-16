@@ -3,11 +3,11 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
-const TRAVELSTART_URL = "https://tinyurl.com/travelstart-vingel"
+const TRAVELSTART_URL = "https://bit.ly/4gny4lv "
 
 // Your provided Viator affiliate URL
 const VIATOR_URL =
-  "https://tinyurl.com/viator-vingel"
+  "https://bit.ly/4poICor "
 
 const EXPEDIA_URL = "https://expedia.com/affiliate/VaSAcKD"
 
