@@ -22,7 +22,7 @@ export default function TravelstartSection() {
             flight times for your journey.
           </p>
 
-          <a href="https://www.travelstart.com" target="_blank" rel="noopener noreferrer" className="inline-block">
+          <a href="https://bit.ly/4gny4lv" target="_blank" rel="noopener noreferrer" className="inline-block">
             <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg font-semibold">
               Search Flights on Travelstart
             </Button>

@@ -50,4 +50,15 @@ export default function AffiliatePage() {
             className="block bg-gray-50 rounded-2xl border border-gray-200 hover:border-orange-300 hover:shadow-lg transition-all duration-300 p-10 flex flex-col items-center text-center"
           >
             <div
-              className={`h-20 w-20 mb-6 flex
+              className={`h-20 w-20 mb-6 flex items-center justify-center rounded-full text-white text-3xl font-bold ${partner.color}`}
+            >
+              {partner.icon}
+            </div>
+            <h3 className="text-2xl font-semibold mb-3">{partner.name}</h3>
+            <p className="text-gray-600">{partner.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+}
