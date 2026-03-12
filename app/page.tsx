@@ -1,9 +1,8 @@
 "use client"
 
 import Navigation from "@/components/navigation"
-import Hero from "@/components/hero"
-import AboutSection from "@/components/about-section"
-import ServicesSection from "@/components/services-section"
+import PremiumHero from "@/components/premium-hero"
+import PremiumServices from "@/components/premium-services"
 import Testimonials from "@/components/testimonials"
 import ContactSection from "@/components/contact-section"
 import Footer from "@/components/footer"
@@ -35,172 +34,145 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-neutral-50">
       <Navigation />
-      <Hero />
-      
-      {/* Immigration Advisory Highlights */}
+      <PremiumHero />
+
+      {/* Premium Services Showcase */}
       <div className="fade-in-section">
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-blue-100">
-          <div className="max-w-6xl mx-auto">
+        <PremiumServices />
+      </div>
+
+      {/* Why Choose Vingel */}
+      <div className="fade-in-section">
+        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-neutral-900 text-white">
+          <div className="max-w-7xl mx-auto">
             <motion.div
-              className="text-center mb-16"
+              className="grid md:grid-cols-2 gap-16 items-center"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Immigration Advisory Services</h2>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto">Expert guidance on visa applications, immigration law, and travel documentation to help you achieve your global goals.</p>
-            </motion.div>
+              <div>
+                <p className="text-sm uppercase tracking-widest text-brand-orange mb-4">Why Partner With Us</p>
+                <h2 className="text-5xl sm:text-6xl font-playfair font-bold mb-8 leading-tight">
+                  Trusted by 1,000+ Global Aspirants
+                </h2>
+                <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
+                  We're not just another visa consultancy. We're your dedicated partners in achieving your international dreams with integrity, expertise, and personalized care.
+                </p>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              {[
-                { title: "Visa Assessment", desc: "Personalized evaluation of your visa options" },
-                { title: "Documentation Support", desc: "Complete guidance on required documents" },
-                { title: "Interview Prep", desc: "Thorough preparation for visa interviews" }
-              ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  className="bg-white p-8 rounded-lg border-l-4 border-[#f37021] shadow-md"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                >
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-                  <p className="text-gray-600">{item.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-
-            <div className="text-center">
-              <Link href="/immigration-advisory">
-                <Button size="lg" className="bg-[#f37021] hover:bg-[#d85f1a] text-white font-semibold px-8 py-3">
-                  Explore Our Services
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      {/* About Section */}
-      <div className="fade-in-section">
-        <AboutSection />
-      </div>
-
-      {/* Why Choose Us - Immigration Focused */}
-      <div className="fade-in-section">
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Vingel Travels & Tours?</h2>
-              <p className="text-xl text-gray-700">Your trusted partner for immigration and travel services</p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 gap-12">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Immigration Expertise</h3>
-                <ul className="space-y-4 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-[#f37021] font-bold mr-3">✓</span>
-                    <span>10+ years of immigration advisory experience</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#f37021] font-bold mr-3">✓</span>
-                    <span>1,000+ successful visa applications processed</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#f37021] font-bold mr-3">✓</span>
-                    <span>95% visa approval success rate</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#f37021] font-bold mr-3">✓</span>
-                    <span>Expert knowledge of multiple visa categories</span>
-                  </li>
-                </ul>
-              </motion.div>
+                <div className="space-y-6">
+                  {[
+                    { stat: "10+", label: "Years of Excellence" },
+                    { stat: "95%", label: "Visa Success Rate" },
+                    { stat: "1,000+", label: "Clients Served" },
+                  ].map((item, i) => (
+                    <motion.div
+                      key={i}
+                      className="flex items-start gap-4"
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.1, duration: 0.6 }}
+                    >
+                      <div className="w-12 h-12 flex items-center justify-center bg-brand-orange rounded-lg">
+                        <span className="font-bold text-lg">{item.stat.split("+")[0]}</span>
+                      </div>
+                      <div>
+                        <p className="text-brand-orange font-bold text-sm uppercase tracking-wide">{item.stat}</p>
+                        <p className="text-neutral-400">{item.label}</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
 
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                className="relative h-96 bg-gradient-to-br from-brand-orange/20 to-brand-orange/5 rounded-lg border border-brand-orange/30 overflow-hidden"
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
               >
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Comprehensive Support</h3>
-                <ul className="space-y-4 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-[#f37021] font-bold mr-3">✓</span>
-                    <span>Personalized consultation and visa assessment</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#f37021] font-bold mr-3">✓</span>
-                    <span>Document preparation and guidance</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#f37021] font-bold mr-3">✓</span>
-                    <span>Interview preparation and coaching</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#f37021] font-bold mr-3">✓</span>
-                    <span>Integrated travel services coordination</span>
-                  </li>
-                </ul>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-6xl font-playfair font-bold text-brand-orange/20 mb-4">
+                      Global
+                    </div>
+                    <p className="text-neutral-500 text-lg">Immigration & Travel Advisory</p>
+                  </div>
+                </div>
               </motion.div>
-            </div>
+            </motion.div>
           </div>
         </section>
-      </div>
-      
-      {/* Services Section */}
-      <div className="fade-in-section">
-        <ServicesSection />
       </div>
 
       {/* Success Stories */}
       <div className="fade-in-section">
-        <Testimonials />
-      </div>
-
-      {/* CTA Section */}
-      <div className="fade-in-section">
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#f37021] to-[#d85f1a] text-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.h2
-              className="text-4xl font-bold mb-6"
+        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              className="text-center mb-16"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.8 }}
             >
-              Ready to Achieve Your Immigration Goals?
-            </motion.h2>
-            <motion.p
-              className="text-xl mb-8 text-white/90"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              <p className="text-sm uppercase tracking-widest text-brand-orange mb-4">Client Testimonials</p>
+              <h2 className="text-5xl sm:text-6xl font-playfair font-bold mb-6">
+                Stories of Success
+              </h2>
+              <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
+                Real experiences from clients who achieved their immigration goals with our guidance.
+              </p>
+            </motion.div>
+
+            <Testimonials />
+          </div>
+        </section>
+      </div>
+
+      {/* Premium CTA Section */}
+      <div className="fade-in-section">
+        <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          {/* Background gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-orange via-brand-orange to-neutral-900 opacity-95" />
+          
+          <div className="relative z-10 max-w-5xl mx-auto text-center">
+            <motion.h2
+              className="text-6xl sm:text-7xl font-playfair font-bold text-white mb-6 leading-tight"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >
-              Schedule a consultation with our immigration and travel advisors to discuss your visa options and create a personalized strategy.
+              Ready to Transform Your Future?
+            </motion.h2>
+            
+            <motion.p
+              className="text-xl sm:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+            >
+              Schedule a personalized consultation with our immigration experts to discover your path to global opportunity.
             </motion.p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+            <motion.div
+              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+            >
               <Link href="/consultation">
-                <Button size="lg" className="bg-white text-[#f37021] hover:bg-gray-100 text-lg font-semibold px-8 py-3">
-                  Book Consultation
+                <Button className="btn-primary bg-white text-brand-orange hover:bg-neutral-100">
+                  Book Your Consultation
                 </Button>
               </Link>
               <Link href="/success-stories">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 text-lg font-semibold px-8 py-3">
-                  Read Success Stories
+                <Button className="btn-secondary border-2 border-white text-white hover:bg-white hover:text-brand-orange">
+                  View Success Stories
                 </Button>
               </Link>
-            </div>
+            </motion.div>
           </div>
         </section>
       </div>

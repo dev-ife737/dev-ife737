@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, Poppins } from "next/font/google"
+import { Inter, Poppins, Playfair_Display } from "next/font/google"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
@@ -8,6 +8,11 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-poppins",
+})
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-playfair",
 })
 
 export const metadata: Metadata = {
@@ -82,18 +87,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="theme-color" content="#f37021" />
-        <meta name="msapplication-TileColor" content="#f37021" />
-        <meta name="application-name" content="Vingel Travels & Tours" />
-        <meta name="apple-mobile-web-app-title" content="Vingel Travels" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      </head>
-      <body className={`font-sans bg-white text-[#2D2D2D] antialiased`}>{children}</body>
+    <html lang="en">
+      <body className={`${inter.variable} ${poppins.variable} ${playfair.variable} antialiased`}>{children}</body>
     </html>
   )
 }
