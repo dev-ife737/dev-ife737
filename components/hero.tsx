@@ -8,24 +8,24 @@ import Image from "next/image"
 
 const heroImages = [
   {
-    src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    alt: "Golden sunset over ocean with mountains",
-    title: "Ocean Paradise",
+    src: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    alt: "Professional business meeting and consultation",
+    title: "Expert Guidance",
   },
   {
-    src: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80",
-    alt: "Airplane wing above clouds at sunset",
-    title: "Sky Adventures",
+    src: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    alt: "Global map and international travel documentation",
+    title: "Global Expertise",
   },
   {
-    src: "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    alt: "Desert landscape with sand dunes at sunset",
-    title: "Desert Wonders",
+    src: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    alt: "Professional workspace with documents",
+    title: "Visa Advisory",
   },
   {
-    src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80",
-    alt: "Tropical beach with crystal clear water",
-    title: "Beach Paradise",
+    src: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    alt: "International travel and immigration services",
+    title: "Travel Documentation",
   },
 ]
 
@@ -83,33 +83,32 @@ export default function Hero() {
       {/* content */}
       <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <h1 className="font-sans text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-          Explore the World
+          Your Immigration & Visa
           <motion.span
             className="block text-[rgb(253,124,71)] drop-shadow-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            With Vingel Travels
+            Advisory Experts
           </motion.span>
         </h1>
 
         <p className="font-sans text-xl sm:text-2xl mb-12 text-white/90 max-w-3xl mx-auto leading-relaxed">
-          Premium travel experiences crafted for discerning travelers. Join over 1K+ satisfied clients who trust us
-          with their journeys.
+          Expert guidance on immigration, visa applications, and travel documentation. Trusted by over 1,000+ clients with a 95% visa success rate.
         </p>
 
         {/* ctas */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-          <Link href="/booking">
+          <Link href="/consultation">
             <Button size="lg" className="btn-primary text-lg font-semibold px-8 py-3">
-              Book Your Trip
+              Book Consultation
             </Button>
           </Link>
 
-          <Link href="/travel-deals">
+          <Link href="/immigration-advisory">
             <Button variant="outline" size="lg" className="btn-outline text-lg font-semibold px-8 py-3">
-              View Travel Deals
+              Learn More
             </Button>
           </Link>
         </div>
@@ -118,15 +117,15 @@ export default function Hero() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
           <div>
             <div className="text-3xl font-bold text-white">1,000+</div>
-            <div className="text-white/80 font-medium">Clients Served</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-white">50+</div>
-            <div className="text-white/80 font-medium">Destinations</div>
+            <div className="text-white/80 font-medium">Visa Applications</div>
           </div>
           <div>
             <div className="text-3xl font-bold text-white">95%</div>
-            <div className="text-white/80 font-medium">Visa Success Rate</div>
+            <div className="text-white/80 font-medium">Success Rate</div>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-white">10+</div>
+            <div className="text-white/80 font-medium">Years Experience</div>
           </div>
         </div>
       </div>

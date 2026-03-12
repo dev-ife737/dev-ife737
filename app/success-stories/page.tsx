@@ -10,36 +10,63 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 
-const existingReviews = [
+const successStories = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    rating: 5,
-    date: "2024-01-15",
-    review:
-      "Absolutely amazing experience! Vingel Travels made our honeymoon perfect. Every detail was handled professionally.",
-    avatar: "👩‍💼",
+    name: "Adekunle Okonkwo",
+    visaType: "UK Work Visa",
+    date: "2024-02-20",
+    story:
+      "The team at Vingel Travels made my work visa application seamless. Their expert guidance on documentation and interview preparation was invaluable. I was approved on the first attempt!",
+    result: "Approved in 3 weeks",
   },
   {
     id: 2,
-    name: "Michael Chen",
-    rating: 5,
-    date: "2024-01-10",
-    review:
-      "Outstanding service from start to finish. The team went above and beyond to ensure our family trip was memorable.",
-    avatar: "👨‍💻",
+    name: "Chioma Adeyemi",
+    visaType: "Canadian Student Visa",
+    date: "2024-02-10",
+    story:
+      "I was overwhelmed by the student visa process until Vingel Travels stepped in. They guided me through every step and coordinated with my university. I couldn't have done it without them.",
+    result: "Approved with full support",
   },
   {
     id: 3,
-    name: "Emma Wilson",
-    rating: 5,
-    date: "2024-01-05",
-    review: "Professional, reliable, and incredibly helpful. I wouldn't trust anyone else with my travel plans!",
-    avatar: "👩‍🎨",
+    name: "Tunde Adedeji",
+    visaType: "Schengen Visa",
+    date: "2024-01-25",
+    story: "Professional, knowledgeable, and thorough. Vingel's team understood European visa requirements better than anyone I consulted. Highly recommended for anyone considering Schengen travel.",
+    result: "Multiple entry approved",
+  },
+  {
+    id: 4,
+    name: "Grace Abiola",
+    visaType: "US Business Visa",
+    date: "2024-01-15",
+    story:
+      "Complex business visa situation resolved expertly. The team provided strategic advice that made my interview stress-free. Professional service from start to finish.",
+    result: "Approved for business activities",
+  },
+  {
+    id: 5,
+    name: "Emeka Nwosu",
+    visaType: "Australian PR",
+    date: "2023-12-20",
+    story:
+      "Permanent residency visa process is complex, but Vingel made it manageable. They assessed my eligibility, prepared documentation, and guided me throughout. Now I'm planning my move!",
+    result: "PR approved",
+  },
+  {
+    id: 6,
+    name: "Zainab Hassan",
+    visaType: "Family Sponsorship",
+    date: "2023-12-10",
+    story:
+      "Reuniting with family abroad seemed daunting, but Vingel's family sponsorship expertise made it possible. Their attention to detail and timely follow-ups were exceptional.",
+    result: "Visa approved, family reunited",
   },
 ]
 
-export default function ReviewsPage() {
+export default function SuccessStoriesPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",

@@ -47,6 +47,36 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <Link
               href="/"
+              className="text-gray-700 hover:text-[#f37021] transition-all duration-300 hover:scale-105 font-medium">
+              Home
+            </Link>
+            <Link
+              href="/immigration-advisory"
+              className="text-gray-700 hover:text-[#f37021] transition-all duration-300 hover:scale-105 font-medium">
+              Immigration Advisory
+            </Link>
+            <Link
+              href="/travel-services"
+              className="text-gray-700 hover:text-[#f37021] transition-all duration-300 hover:scale-105 font-medium">
+              Travel Services
+            </Link>
+            <Link
+              href="/success-stories"
+              className="text-gray-700 hover:text-[#f37021] transition-all duration-300 hover:scale-105 font-medium">
+              Success Stories
+            </Link>
+            <Link
+              href="/about"
+              className="text-gray-700 hover:text-[#f37021] transition-all duration-300 hover:scale-105 font-medium">
+              About
+            </Link>
+            <Link
+              href="/contact"
+              className="text-gray-700 hover:text-[#f37021] transition-all duration-300 hover:scale-105 font-medium">
+              Contact
+            </Link>
+            <Link
+              href="/consultation"
               className="text-gray-700 hover:text-[#f37021] transition-all duration-300 hover:scale-105 font-medium"
             >
               Home
